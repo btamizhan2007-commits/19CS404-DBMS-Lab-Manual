@@ -38,12 +38,13 @@ FlexiFit Gym wants a database to manage its members, trainers, and fitness progr
 
 <img width="887" height="345" alt="image" src="https://github.com/user-attachments/assets/4060104e-551b-4f00-b88f-892bb347098c" />
 
-### Assumptions
+Assumptions
    •	All entity IDs are surrogate primary keys and are unique and system-generated.
    •	Every M:N relationship (Member–Program, Trainer–Program) is resolved with a dedicated junction table.
    •	Attendance is modelled as a Status attribute on Session (e.g., Attended, No-show, Cancelled) rather than a separate entity.
    •	A payment can relate to either a membership fee or a training session; PaymentType distinguishes the two.
    •	A member can have at most one active membership at a time.
+
 
 ---
 
