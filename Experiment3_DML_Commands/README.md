@@ -150,7 +150,7 @@ select customer_id,city,grade,'Low Rating' as Rating from customer where grade<3
 <img width="1239" height="494" alt="q8" src="https://github.com/user-attachments/assets/81452ecd-47b4-4434-b36f-45e395cfe350" />
 
 ```sql
-delete from Customer where CUST_CITY<>'New York' and OUTSTANDING_AMT >5000;
+select customer_id,cust_name,city,grade,salesman_id from customer where city='New York' or grade >200;
 ```
 
 **Output:**
@@ -163,7 +163,7 @@ delete from Customer where CUST_CITY<>'New York' and OUTSTANDING_AMT >5000;
 <img width="1263" height="510" alt="q9" src="https://github.com/user-attachments/assets/2c67a01f-f342-49d4-9888-c83bb0c2665c" />
 
 ```sql
-select customer_id,cust_name,city,grade,salesman_id from customer where city='New York' or grade >200;
+delete from Customer where CUST_CITY<>'New York' and OUTSTANDING_AMT >5000;
 ```
 
 **Output:**
