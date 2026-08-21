@@ -1,5 +1,8 @@
 # Experiment 2: DDL Commands
 
+## NAME: TAMIZHAN B
+## REF NO: 212225230283
+
 ## AIM
 To study and implement DDL commands and different types of constraints.
 
@@ -105,124 +108,180 @@ CREATE TABLE Table_Name (
 
 **Question 1**
 --
--- Paste Question 1 here
+
+<img width="925" height="432" alt="q1" src="https://github.com/user-attachments/assets/4384b93b-3dff-4deb-bab1-b60e5446b095" />
+
 
 ```sql
--- Paste your SQL code below for Question 1
+alter table employee rename column id to employee_id;
 ```
 
 **Output:**
 
-![Output1](output.png)
+<img width="1251" height="339" alt="a1" src="https://github.com/user-attachments/assets/3682e985-f418-4c39-8638-668bd7d3900a" />
 
 **Question 2**
 ---
--- Paste Question 2 here
+
+<img width="902" height="461" alt="q2" src="https://github.com/user-attachments/assets/e341f0eb-738f-460c-831a-3229454e52ce" />
 
 ```sql
--- Paste your SQL code below for Question 2
+create table Customers(
+CustomerID INTEGER,
+Name TEXT,
+Email TEXT,
+JoinDate DATETIME
+);
 ```
 
 **Output:**
 
-![Output2](output.png)
+<img width="1239" height="416" alt="a2" src="https://github.com/user-attachments/assets/30f559bd-512a-4486-89a1-356f2650a8c5" />
+
 
 **Question 3**
 ---
--- Paste Question 3 here
+
+<img width="1212" height="495" alt="q3" src="https://github.com/user-attachments/assets/f2100cec-d20b-4c64-91cc-1dcace4766a2" />
 
 ```sql
--- Paste your SQL code below for Question 3
+insert into Customers(CustomerID,Name,Address) 
+values(306,'Diana Prince','Themyscira');
+insert into Customers(CustomerID,Name,Address,City,Zipcode)
+values(307,'Bruce Wayne','Wayne Mano','Gotham',10007);
+insert into Customers(CustomerID,Name,Address,Zipcode)
+values(308,'Peter Parker','Queens',11375);
 ```
 
 **Output:**
 
-![Output3](output.png)
+<img width="1252" height="328" alt="a3" src="https://github.com/user-attachments/assets/e2c9a079-5196-444d-9bca-1bdf28393d39" />
 
 **Question 4**
 ---
--- Paste Question 4 here
+
+<img width="767" height="404" alt="q4" src="https://github.com/user-attachments/assets/6c1c7d83-e25f-47d7-ba03-9fb85794534c" />
 
 ```sql
--- Paste your SQL code below for Question 4
+insert into Employee(EmployeeID,Name,Position,Department,Salary)
+values (2,'John Smith','Developer','IT',75000),
+(3,'Anna Bell','Designer','Marketing',68000);
 ```
 
 **Output:**
 
-![Output4](output.png)
+<img width="1262" height="388" alt="a4" src="https://github.com/user-attachments/assets/4b7ceb49-19ac-4827-a758-ba24f5205b8b" />
 
 **Question 5**
 ---
--- Paste Question 5 here
+
+<img width="1225" height="500" alt="q5" src="https://github.com/user-attachments/assets/22b72a2c-d425-4b91-927a-7ddf06c103c8" />
 
 ```sql
--- Paste your SQL code below for Question 5
+insert into Employee(EmployeeID,Name,Position)
+values(5,'George Clark','Consultant');
+insert into Employee(EmployeeID,Name,Position,Department,Salary)
+values(7,'Noah Davis','Manager','HR',60000);
+insert into Employee(EmployeeID,Name,Position,Department)
+values(8,'Ava Miller','Consultant','IT');
 ```
 
 **Output:**
 
-![Output5](output.png)
+<img width="1243" height="316" alt="a5" src="https://github.com/user-attachments/assets/7fb7550e-3c3f-4435-8a1c-3819b635c29d" />
 
 **Question 6**
 ---
--- Paste Question 6 here
+
+<img width="883" height="455" alt="q6" src="https://github.com/user-attachments/assets/8d3c34a0-6113-4d8c-a3a2-43b694d46488" />
 
 ```sql
--- Paste your SQL code below for Question 6
+create table Products(
+ProductID INTEGER,
+ProductName TEXT,
+Price REAL,
+Stock INTEGER 
+);
 ```
 
 **Output:**
 
-![Output6](output.png)
+<img width="1252" height="338" alt="a6" src="https://github.com/user-attachments/assets/5415f5e5-93c1-4a93-beb7-218314c4faa1" />
 
 **Question 7**
 ---
--- Paste Question 7 here
+
+<img width="880" height="315" alt="q7" src="https://github.com/user-attachments/assets/541952dc-d795-412e-b3d8-5b86663c9cc1" />
 
 ```sql
--- Paste your SQL code below for Question 7
+alter table employee add column designation varchar(50);
 ```
 
 **Output:**
 
-![Output7](output.png)
+<img width="1235" height="309" alt="a7" src="https://github.com/user-attachments/assets/14b925cf-137b-42eb-837f-93e1b30686c9" />
 
 **Question 8**
 ---
--- Paste Question 8 here
+
+<img width="888" height="401" alt="q8" src="https://github.com/user-attachments/assets/09bdc544-e6cc-4454-801d-fdef58f29da5" />
 
 ```sql
--- Paste your SQL code below for Question 8
+create table Tasks(
+TaskID INTEGER,
+TaskName TEXT,
+DueDate DATE 
+);
 ```
 
 **Output:**
 
-![Output8](output.png)
+<img width="1235" height="400" alt="a8" src="https://github.com/user-attachments/assets/8129a594-c3fc-4dd3-a3dd-9db150a2349c" />
 
 **Question 9**
 ---
--- Paste Question 9 here
+
+<img width="1254" height="359" alt="q9" src="https://github.com/user-attachments/assets/328a7841-9955-4b17-9cbb-15d724484af7" />
 
 ```sql
--- Paste your SQL code below for Question 9
+CREATE TABLE ProjectAssignments(
+AssignmentID INTEGER PRIMARY KEY,
+EmployeeID  INTEGER, 
+ProjectID INTEGER,
+AssignmentDate  DATE NOT NULL,
+FOREIGN KEY (EmployeeID)
+   REFERENCES  Employees(EmployeeID)
+FOREIGN KEY (ProjectID)
+   REFERENCES  Projects(ProjectID)
+);
 ```
 
 **Output:**
 
-![Output9](output.png)
+<img width="1247" height="307" alt="a9" src="https://github.com/user-attachments/assets/e900238c-dc75-4beb-8acb-25323afe2e2e" />
 
 **Question 10**
 ---
--- Paste Question 10 here
+
+<img width="1200" height="420" alt="q10" src="https://github.com/user-attachments/assets/7124df24-a976-4079-aa6a-c6a16d9dfc68" />
 
 ```sql
--- Paste your SQL code below for Question 10
+ALTER TABLE  Companies
+RENAME name to first_name;
+
+ALTER TABLE  Companies
+ADD  mobilenumber  number;
+
+ALTER TABLE  Companies
+ADD DOB  Date;
+
+ALTER TABLE  Companies
+ADD State varchar(30);
 ```
 
 **Output:**
 
-![Output10](output.png)
-
+<img width="1253" height="439" alt="a10" src="https://github.com/user-attachments/assets/bd9b22ed-c05b-4b8b-9079-3538ac4149c7" />
 
 ## RESULT
 Thus, the SQL queries to implement different types of constraints and DDL commands have been executed successfully.
