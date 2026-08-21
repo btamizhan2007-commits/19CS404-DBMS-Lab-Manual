@@ -176,7 +176,7 @@ delete from Customer where CUST_CITY<>'New York' and OUTSTANDING_AMT >5000;
 <img width="1205" height="582" alt="q10" src="https://github.com/user-attachments/assets/423c5c15-1649-40eb-878a-deec72da9d8b" />
 
 ```sql
-delete from customer where GRADE =2;
+update employees SET salary=8000 where employee_id =105 and salary<5000;
 ```
 
 **Output:**
