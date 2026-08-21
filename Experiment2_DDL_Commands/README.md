@@ -3,6 +3,9 @@
 ## AIM
 To study and implement DDL commands and different types of constraints.
 
+## NAME: TAMIZHAN B
+## REF NO: 212225230283
+
 ## THEORY
 
 ### 1. CREATE
@@ -105,123 +108,178 @@ CREATE TABLE Table_Name (
 
 **Question 1**
 --
--- Paste Question 1 here
+<img width="952" height="488" alt="image" src="https://github.com/user-attachments/assets/a310052c-03fb-4f1f-b9b6-dbf77799e806" />
 
 ```sql
--- Paste your SQL code below for Question 1
+alter table employee rename column id to employee_id;
 ```
 
 **Output:**
 
-![Output1](output.png)
+<img width="1274" height="337" alt="image" src="https://github.com/user-attachments/assets/8771f8c9-2f13-4d5a-a56f-87435188e3a2" />
 
 **Question 2**
 ---
--- Paste Question 2 here
+
+<img width="892" height="515" alt="image" src="https://github.com/user-attachments/assets/f74f28b7-c041-4e21-966c-7c14df9efe6e" />
 
 ```sql
--- Paste your SQL code below for Question 2
+create table Customers(
+CustomerID INTEGER,
+Name TEXT,
+Email TEXT,
+JoinDate DATETIME
+);
 ```
 
 **Output:**
 
-![Output2](output.png)
+<img width="1263" height="466" alt="image" src="https://github.com/user-attachments/assets/97595ece-4e9b-45c9-b1fd-82942f6e8e70" />
 
 **Question 3**
 ---
--- Paste Question 3 here
+
+<img width="1262" height="564" alt="image" src="https://github.com/user-attachments/assets/1ea80de2-b12e-44c6-94f7-e03c4fa567d0" />
 
 ```sql
--- Paste your SQL code below for Question 3
+
+insert into Customers(CustomerID,Name,Address) 
+values(306,'Diana Prince','Themyscira');
+insert into Customers(CustomerID,Name,Address,City,Zipcode)
+values(307,'Bruce Wayne','Wayne Mano','Gotham',10007);
+insert into Customers(CustomerID,Name,Address,Zipcode)
+values(308,'Peter Parker','Queens',11375);
 ```
 
 **Output:**
 
-![Output3](output.png)
+<img width="1270" height="354" alt="image" src="https://github.com/user-attachments/assets/69d9aab3-db4b-4376-813a-c68471a6c295" />
 
 **Question 4**
 ---
--- Paste Question 4 here
+
+<img width="782" height="464" alt="image" src="https://github.com/user-attachments/assets/5b0b9cb2-3390-4a23-b014-6cc70e6b4595" />
 
 ```sql
--- Paste your SQL code below for Question 4
+insert into Employee(EmployeeID,Name,Position,Department,Salary)
+values (2,'John Smith','Developer','IT',75000),
+(3,'Anna Bell','Designer','Marketing',68000);
 ```
 
 **Output:**
 
-![Output4](output.png)
+<img width="1276" height="424" alt="image" src="https://github.com/user-attachments/assets/17b64fc8-b0a1-4c87-96d1-ddd35968258f" />
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+
+<img width="1243" height="568" alt="image" src="https://github.com/user-attachments/assets/e7e26b45-ab0d-4d66-b3ab-2b327d89cc71" />
 
 ```sql
--- Paste your SQL code below for Question 5
+insert into Employee(EmployeeID,Name,Position)
+values(5,'George Clark','Consultant');
+insert into Employee(EmployeeID,Name,Position,Department,Salary)
+values(7,'Noah Davis','Manager','HR',60000);
+insert into Employee(EmployeeID,Name,Position,Department)
+values(8,'Ava Miller','Consultant','IT');
 ```
 
 **Output:**
 
-![Output5](output.png)
+<img width="1274" height="350" alt="image" src="https://github.com/user-attachments/assets/813d2aeb-77bf-4e6e-bfb2-a00df2ae4bef" />
 
 **Question 6**
 ---
--- Paste Question 6 here
+
+<img width="1197" height="433" alt="image" src="https://github.com/user-attachments/assets/53da816e-f610-4cf6-bf6c-8e1692870b6e" />
 
 ```sql
--- Paste your SQL code below for Question 6
+ALTER TABLE  Companies
+RENAME name to first_name;
+
+ALTER TABLE  Companies
+ADD  mobilenumber  number;
+
+ALTER TABLE  Companies
+ADD DOB  Date;
+
+ALTER TABLE  Companies
+ADD State varchar(30);
+);
 ```
 
 **Output:**
 
-![Output6](output.png)
+<img width="1251" height="432" alt="image" src="https://github.com/user-attachments/assets/bf33b304-3683-424e-b6ff-77d2397aa9e4" />
 
 **Question 7**
 ---
--- Paste Question 7 here
+<img width="856" height="516" alt="image" src="https://github.com/user-attachments/assets/177e64c7-08cd-481b-96d3-2d60f0152ad0" />
 
 ```sql
--- Paste your SQL code below for Question 7
+create table Products(
+ProductID INTEGER,
+ProductName TEXT,
+Price REAL,
+Stock INTEGER 
+);
 ```
 
 **Output:**
 
-![Output7](output.png)
+<img width="1234" height="342" alt="image" src="https://github.com/user-attachments/assets/32424b64-a03e-431d-9b70-49fd1a643450" />
 
 **Question 8**
 ---
--- Paste Question 8 here
+
+<img width="1235" height="354" alt="image" src="https://github.com/user-attachments/assets/3f0bff58-b7ca-4226-9f3f-f70f04653fef" />
 
 ```sql
--- Paste your SQL code below for Question 8
+alter table employee add column designation varchar(50);
 ```
 
 **Output:**
 
-![Output8](output.png)
+<img width="1244" height="331" alt="image" src="https://github.com/user-attachments/assets/e9c6e228-afff-402c-a8c1-ba3ae5db3070" />
+
 
 **Question 9**
 ---
--- Paste Question 9 here
+<img width="1258" height="342" alt="image" src="https://github.com/user-attachments/assets/dfccd3c0-95e1-456a-97fd-2d22ca0b025c" />
 
 ```sql
--- Paste your SQL code below for Question 9
+CREATE TABLE ProjectAssignments(
+AssignmentID INTEGER PRIMARY KEY,
+EmployeeID  INTEGER, 
+ProjectID INTEGER,
+AssignmentDate  DATE NOT NULL,
+FOREIGN KEY (EmployeeID)
+   REFERENCES  Employees(EmployeeID)
+FOREIGN KEY (ProjectID)
+   REFERENCES  Projects(ProjectID)
+);
 ```
 
 **Output:**
 
-![Output9](output.png)
+<img width="1243" height="319" alt="image" src="https://github.com/user-attachments/assets/b4db2faf-c9d6-4b74-ac93-492267ea9c65" />
 
 **Question 10**
 ---
--- Paste Question 10 here
+<img width="877" height="463" alt="image" src="https://github.com/user-attachments/assets/dfb9d903-e289-4735-adb1-df1903685559" />
 
 ```sql
--- Paste your SQL code below for Question 10
+create table Tasks(
+TaskID INTEGER,
+TaskName TEXT,
+DueDate DATE 
+);
 ```
 
 **Output:**
 
-![Output10](output.png)
+<img width="1247" height="410" alt="image" src="https://github.com/user-attachments/assets/0e1a120c-e78d-4ce4-99cf-373e0f96d0aa" />
 
 
 ## RESULT
