@@ -54,123 +54,299 @@ ON table1.column = table2.column;
 
 **Question 1**
 --
--- Paste Question 1 here
+Write a SQL query that retrieve all the columns from the table "Grades", where the grade is equal to the maximum grade achieved in each subject. Sample table: GRADES (attributes: student_id, student_name, subject, grade)
+
 
 ```sql
--- Paste your SQL code below for Question 1
+SELECT *
+FROM GRADES g
+WHERE grade = (
+    SELECT MAX(grade)
+    FROM GRADES
+    WHERE subject = g.subject
+);
+
 ```
 
 **Output:**
 
-![Output1](output.png)
+<img width="1136" height="335" alt="image" src="https://github.com/user-attachments/assets/e29cbe56-7822-4587-ae74-2bfdb92864c5" />
+
 
 **Question 2**
 ---
--- Paste Question 2 here
+Write a SQL query to Identify customers whose city is different from the city of the customer with the highest ID
+
+SAMPLE TABLE: customer
 
 ```sql
--- Paste your SQL code below for Question 2
+name             type
+---------------  ---------------
+id               INTEGER
+name             TEXT
+city             TEXT
+email            TEXT
+phone            INTEGER
+```
+```
+SELECT *
+FROM customer
+WHERE city <> (
+    SELECT city
+    FROM customer
+    WHERE id = (SELECT MAX(id) FROM customer)
+);
 ```
 
 **Output:**
 
-![Output2](output.png)
+<img width="1118" height="367" alt="image" src="https://github.com/user-attachments/assets/576cfce0-886f-42e0-8c5a-d401d71d9553" />
+
 
 **Question 3**
 ---
--- Paste Question 3 here
+Write a SQL query to retrieve all columns from the CUSTOMERS table for customers whose salary is LESS than $2500.
 
 ```sql
--- Paste your SQL code below for Question 3
+ID          NAME        AGE         ADDRESS     SALARY
+----------  ----------  ----------  ----------  ----------
+
+1          Ramesh     32              Ahmedabad     2000
+2          Khilan        25              Delhi                 1500
+3          Kaushik      23              Kota                  2000
+4          Chaitali       25             Mumbai            6500
+5          Hardik        27              Bhopal              8500
+6          Komal         22              Hyderabad       4500
+
+7           Muffy          24              Indore            10000
+
+```
+```
+SELECT *
+FROM CUSTOMERS
+WHERE SALARY < 2500;
 ```
 
 **Output:**
 
-![Output3](output.png)
+<img width="1000" height="352" alt="image" src="https://github.com/user-attachments/assets/68e1f8e0-1c56-4cda-be73-a0483928b3a9" />
+
 
 **Question 4**
 ---
--- Paste Question 4 here
+From the following tables write a SQL query to count the number of customers with grades above the average in New York City. Return grade and count.
+
+customer table
 
 ```sql
--- Paste your SQL code below for Question 4
+name         type
+-----------  ----------
+customer_id  int
+cust_name    text
+city         text
+grade        int
+salesman_id  int
+```
+```
+SELECT grade, COUNT(*)
+FROM customer
+WHERE  grade > (SELECT AVG(grade) FROM customer WHERE city = 'New York')
+GROUP BY grade;
+
 ```
 
 **Output:**
 
-![Output4](output.png)
+<img width="493" height="257" alt="image" src="https://github.com/user-attachments/assets/b35c5c5e-9d75-4c5c-abed-86fe8bf6c037" />
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+Write a SQL query to retrieve all columns from the CUSTOMERS table for customers whose Address as Delhi
 
 ```sql
--- Paste your SQL code below for Question 5
-```
+ID          NAME        AGE         ADDRESS     SALARY
+----------  ----------  ----------  ----------  ----------
 
+1          Ramesh     32              Ahmedabad     2000
+2          Khilan        25              Delhi                 1500
+3          Kaushik      23              Kota                  2000
+4          Chaitali       25             Mumbai            6500
+5          Hardik        27              Bhopal              8500
+6          Komal         22              Hyderabad       4500
+
+7           Muffy          24              Indore            10000
+```
+```
+SELECT *
+FROM CUSTOMERS
+WHERE ADDRESS = 'Delhi';
+```
 **Output:**
 
-![Output5](output.png)
+<img width="1005" height="250" alt="image" src="https://github.com/user-attachments/assets/aa4ba76b-6e49-48f7-9c98-f83cfe65524d" />
+
 
 **Question 6**
 ---
--- Paste Question 6 here
+From the following tables write a SQL query to find the order values greater than the average order value of 10th October 2012. Return ord_no, purch_amt, ord_date, customer_id, salesman_id.
+
+Note: date should be yyyy-mm-dd format
+
+ORDERS TABLE
 
 ```sql
--- Paste your SQL code below for Question 6
+name            type
+----------     ----------
+ord_no          int
+purch_amt    real
+ord_date       text
+customer_id  int
+salesman_id  int
+```
+```
+SELECT ord_no, purch_amt, ord_date, customer_id, salesman_id
+FROM ORDERS
+WHERE purch_amt > (
+    SELECT AVG(purch_amt)
+    FROM ORDERS
+    WHERE ord_date = '2012-10-10'
+);
 ```
 
 **Output:**
 
-![Output6](output.png)
+<img width="1015" height="348" alt="image" src="https://github.com/user-attachments/assets/57733ae5-9b09-42f5-84d8-2ea44715d68f" />
+
 
 **Question 7**
 ---
--- Paste Question 7 here
+From the following tables write a SQL query to find all orders generated by New York-based salespeople. Return ord_no, purch_amt, ord_date, customer_id, salesman_id.
+
+salesman table
 
 ```sql
--- Paste your SQL code below for Question 7
+name             type
+---------------  ---------------
+salesman_id      numeric(5)
+name                 varchar(30)
+city                    varchar(15)
+commission       decimal(5,2)
+```
+```
+name             type
+---------------  --------
+order_no         int
+purch_amt        real
+order_date       text
+customer_id      int
+salesman_id      int
+```
+```
+SELECT o.ord_no, o.purch_amt, o.ord_date, o.customer_id, o.salesman_id
+FROM orders o
+JOIN salesman s ON o.salesman_id = s.salesman_id
+WHERE s.city = 'New York';
 ```
 
 **Output:**
+<img width="998" height="353" alt="image" src="https://github.com/user-attachments/assets/216a83a2-3092-4ff2-aae1-7e7eba7b01fb" />
 
-![Output7](output.png)
 
 **Question 8**
 ---
--- Paste Question 8 here
+From the following tables, write a SQL query to find those salespeople who earned the maximum commission. Return ord_no, purch_amt, ord_date, and salesman_id.
+
+salesman table
 
 ```sql
--- Paste your SQL code below for Question 8
+name             type
+---------------  ---------------
+salesman_id      numeric(5)
+name                 varchar(30)
+city                    varchar(15)
+commission       decimal(5,2)
+```
+```
+name             type
+---------------  --------
+order_no         int
+purch_amt        real
+order_date       text
+customer_id      int
+salesman_id      int
+```
+```
+SELECT o.ord_no, o.purch_amt, o.ord_date, o.salesman_id
+FROM orders o
+JOIN salesman s ON o.salesman_id = s.salesman_id
+WHERE s.commission = (
+    SELECT MAX(commission)
+    FROM salesman
+);
 ```
 
-**Output:**
 
-![Output8](output.png)
+**Output:**
+<img width="826" height="357" alt="image" src="https://github.com/user-attachments/assets/013bd9a6-3170-4af8-9352-95d75b3c4775" />
+
 
 **Question 9**
 ---
--- Paste Question 9 here
+From the following tables, write a SQL query to find all the orders generated in New York city. Return ord_no, purch_amt, ord_date, customer_id and salesman_id.
+
+SALESMAN TABLE
 
 ```sql
--- Paste your SQL code below for Question 9
+name               type
+-----------        ----------
+salesman_id  numeric(5)
+name             varchar(30)
+city                 varchar(15)
+commission   decimal(5,2)
+```
+```
+name            type
+----------      ----------
+ord_no          int
+purch_amt    real
+ord_date       text
+customer_id  int
+salesman_id  int
+```
+```
+SELECT o.ord_no, o.purch_amt, o.ord_date, o.customer_id, o.salesman_id
+FROM orders o
+JOIN salesman s ON o.salesman_id = s.salesman_id
+WHERE s.city = 'New York';
 ```
 
 **Output:**
 
-![Output9](output.png)
+
+<img width="981" height="371" alt="image" src="https://github.com/user-attachments/assets/5d48ed03-20d6-481a-977e-28a648fbba05" />
 
 **Question 10**
 ---
--- Paste Question 10 here
+Write a SQL query that retrieves the all the columns from the Table Grades, where the grade is equal to the minimum grade achieved in each subject.
+
+Sample table: GRADES (attributes: student_id, student_name, subject, grade)
 
 ```sql
--- Paste your SQL code below for Question 10
+SELECT student_id, student_name, subject, grade
+FROM Grades g
+WHERE grade = (
+    SELECT MIN(grade)
+    FROM Grades
+    WHERE subject = g.subject
+);
+
 ```
 
 **Output:**
+<img width="1087" height="330" alt="image" src="https://github.com/user-attachments/assets/2f94f38b-f345-45a7-8aa4-19564da45da3" />
 
-![Output10](output.png)
+
 
 
 ## RESULT
