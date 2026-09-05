@@ -38,123 +38,153 @@ HAVING condition;
 
 **Question 1**
 --
--- Paste Question 1 here
+What is the average dosage prescribed for each medication?
 
 ```sql
--- Paste your SQL code below for Question 1
+SELECT MIN(salary) AS minimum_salary
+FROM staff;
+
 ```
 
 **Output:**
 
-![Output1](output.png)
+<img width="827" height="316" alt="image" src="https://github.com/user-attachments/assets/6353d027-7d50-4d77-a470-777401bd7cac" />
+
 
 **Question 2**
 ---
--- Paste Question 2 here
+Find the maximum salary of all staff members
 
 ```sql
--- Paste your SQL code below for Question 2
+SELECT MAX(salary) AS maximum_salary
+FROM staff;
+
 ```
 
 **Output:**
+<img width="842" height="412" alt="image" src="https://github.com/user-attachments/assets/ebd38f2c-7617-4fbf-91f9-ff7b6e67b4b6" />
 
-![Output2](output.png)
 
 **Question 3**
 ---
--- Paste Question 3 here
+Find the total salary of all staff members.
 
 ```sql
--- Paste your SQL code below for Question 3
+SELECT SUM(salary) AS total_salary
+FROM staff;
+
 ```
 
 **Output:**
+<img width="837" height="312" alt="image" src="https://github.com/user-attachments/assets/29d6708c-c706-492f-8d78-8df7cec29160" />
 
-![Output3](output.png)
 
 **Question 4**
 ---
--- Paste Question 4 here
+Find the average salary of all staff members
 
 ```sql
--- Paste your SQL code below for Question 4
+SELECT AVG(salary) AS average_salary
+FROM staff;
 ```
 
 **Output:**
+<img width="837" height="442" alt="image" src="https://github.com/user-attachments/assets/38326095-3e56-47c5-b328-1923ea8120e8" />
 
-![Output4](output.png)
 
 **Question 5**
 ---
--- Paste Question 5 here
+Find the total number of staff members.
 
 ```sql
--- Paste your SQL code below for Question 5
+SELECT COUNT(*) AS total_staff
+FROM staff;
+
 ```
 
 **Output:**
+<img width="830" height="397" alt="image" src="https://github.com/user-attachments/assets/72465081-6e90-414f-8925-8a75f552537f" />
 
-![Output5](output.png)
 
 **Question 6**
 ---
--- Paste Question 6 here
+Find the number of staff members in each department.
 
 ```sql
--- Paste your SQL code below for Question 6
+SELECT department, COUNT(*) AS staff_count
+FROM staff
+GROUP BY department;
+
 ```
 
 **Output:**
 
-![Output6](output.png)
+<img width="827" height="382" alt="image" src="https://github.com/user-attachments/assets/efda5ac7-381e-455f-90bb-1ddadb29c8bc" />
+
 
 **Question 7**
 ---
--- Paste Question 7 here
 
+Find the total salary paid in each department.
 ```sql
--- Paste your SQL code below for Question 7
+SELECT department, SUM(salary) AS total_salary
+FROM staff
+GROUP BY department;
+
 ```
 
 **Output:**
 
-![Output7](output.png)
+<img width="867" height="345" alt="image" src="https://github.com/user-attachments/assets/58efdb3d-1185-46b5-b087-a84f94cbb4a4" />
+
 
 **Question 8**
 ---
--- Paste Question 8 here
+Find the average salary in each department.
 
 ```sql
--- Paste your SQL code below for Question 8
+SELECT department, AVG(salary) AS average_salary
+FROM staff
+GROUP BY department;
+
 ```
 
 **Output:**
 
-![Output8](output.png)
+<img width="821" height="305" alt="image" src="https://github.com/user-attachments/assets/2ea6e518-54bd-402e-bf63-7d3c95a385c8" />
+
 
 **Question 9**
 ---
--- Paste Question 9 here
 
+Display departments having more than 2 staff members.
 ```sql
--- Paste your SQL code below for Question 9
+
+SELECT department, COUNT(*) AS staff_count
+FROM staff
+GROUP BY department
+HAVING COUNT(*) > 2;
 ```
 
 **Output:**
+<img width="827" height="367" alt="image" src="https://github.com/user-attachments/assets/53af328d-8276-4663-9ab7-9f34df0ef0cb" />
 
-![Output9](output.png)
 
 **Question 10**
 ---
--- Paste Question 10 here
+Display departments whose total salary is greater than 150000.
 
 ```sql
--- Paste your SQL code below for Question 10
+SELECT department, SUM(salary) AS total_salary
+FROM staff
+GROUP BY department
+HAVING SUM(salary) > 150000;
+
 ```
 
 **Output:**
+<img width="836" height="276" alt="image" src="https://github.com/user-attachments/assets/7cdf0cf6-5128-409f-807e-898233d455b4" />
 
-![Output10](output.png)
 
 
 ## RESULT
