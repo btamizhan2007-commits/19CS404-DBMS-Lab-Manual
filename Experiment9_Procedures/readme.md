@@ -62,6 +62,7 @@ Key Differences:
 
 **Expected Output:**  
 Square of 6 is 36
+```
 CREATE OR REPLACE PROCEDURE find_square(p_number IN NUMBER) IS
     v_square NUMBER;
 BEGIN
@@ -75,6 +76,7 @@ BEGIN
     find_square(6);
 END;
 /
+```
 ---
 <img width="351" height="138" alt="image" src="https://github.com/user-attachments/assets/f54dffb1-084b-49ab-b52d-caa4cc034e44" />
 
@@ -90,7 +92,7 @@ END;
 **Expected Output:**  
 Factorial of 5 is 120
 SET SERVEROUTPUT ON;
-
+```
 
 CREATE OR REPLACE FUNCTION get_factorial(p_number IN NUMBER)
 RETURN NUMBER
@@ -117,6 +119,7 @@ BEGIN
    DBMS_OUTPUT.PUT_LINE('Factorial of ' || v_input || ' is ' || v_output);
 END;
 /
+```
 ---
 <img width="357" height="150" alt="image" src="https://github.com/user-attachments/assets/37bca1f7-29e0-418e-b6a0-4ef93ae613f5" />
 
@@ -132,7 +135,7 @@ END;
 **Expected Output:**  
 12 is Even
 SET SERVEROUTPUT ON;
-
+```
 
 CREATE OR REPLACE PROCEDURE check_even_odd(p_number IN NUMBER) IS
 BEGIN
@@ -149,6 +152,7 @@ BEGIN
    check_even_odd(12);  
 END;
 /
+```
 ---
 <img width="365" height="149" alt="image" src="https://github.com/user-attachments/assets/efdbd2f8-8abf-4932-9b83-47ea07f27bed" />
 
@@ -163,6 +167,7 @@ END;
 
 **Expected Output:**  
 Reversed number of 1234 is 4321
+```
 CREATE OR REPLACE FUNCTION reverse_number(p_number IN NUMBER)
 RETURN NUMBER IS
     v_number     NUMBER := p_number;
@@ -187,6 +192,7 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('Reversed number of ' || v_input || ' is ' || v_result);
 END;
 /
+```
 ---
 <img width="374" height="158" alt="image" src="https://github.com/user-attachments/assets/80bdb629-72b9-4551-bc3e-1d7b8468b760" />
 
@@ -205,6 +211,7 @@ Multiplication table of 5:
 5 x 3 = 15  
 ...  
 5 x 10 = 50
+```
 CREATE OR REPLACE PROCEDURE print_table(p_number IN NUMBER) IS
 BEGIN
     DBMS_OUTPUT.PUT_LINE('Multiplication table of ' || p_number || ':');
@@ -219,6 +226,7 @@ BEGIN
     print_table(5);
 END;
 /
+```
 <img width="374" height="351" alt="image" src="https://github.com/user-attachments/assets/bb9c7249-1785-4d34-a28a-bb14de077d34" />
 
 ## RESULT
